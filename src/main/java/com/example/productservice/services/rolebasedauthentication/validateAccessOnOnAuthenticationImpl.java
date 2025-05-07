@@ -19,7 +19,7 @@ public class validateAccessOnOnAuthenticationImpl implements ValidateAccessOnAut
 
     @Override
     public boolean validateAccessOnGetAllProducts(String token) {
-        String url = "http://localhost:8081/auth/validateToken";
+        String url = "http://USERSERVICE/auth/validateToken";// Hardcoded , will remove this using eureka
 
         HttpHeaders headers = new HttpHeaders();
         headers.set("auth", token);
